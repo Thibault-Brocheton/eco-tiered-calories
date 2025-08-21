@@ -1,13 +1,13 @@
-# Eco Tiered Calories Mod
+# 🍅​ Eco Tiered Calories Mod
 
 This mod has been developed for Eco version v11.1.13  
 This mod introduces a **tier-based food system** for [Eco](https://www.strangeloopgames.com/eco/).  
 Each food item is assigned a **Tier**. If a player's overall skill level is higher than the food's tier, the **calories provided are reduced proportionally**, encouraging players to consume higher-tier meals as they progress.
 
-## Installation
+## 💻 Installation
 
 Download files and copy AutoGen and CavRnMods Folder inside your Mods/UserCode folder in your eco server.  
-! If other mods you installed already override some foods, you will have to handle conflicts.  
+⚠️​ If other mods you installed already override some foods, you will have to handle conflicts.  
 
 ## ⚙️ Configuration
 
