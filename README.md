@@ -31,7 +31,7 @@ Download files and copy AutoGen and CavRnMods Folder inside your Mods/UserCode f
 
 ## ⚙️ Configuration
 
-The mod automatically creates a configuration file:  
+The mod automatically creates a configuration file, in Configs/TieredCalories.eco   
 This file can be edited to adjust the mod's behavior.  
 
 ### Available Parameters
