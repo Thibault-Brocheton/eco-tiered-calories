@@ -15,7 +15,7 @@
 
     public static class TieredCaloriesHelper
     {
-        private static int GetReductionRatio(FoodItem item, User user)
+        public static int GetReductionRatio(FoodItem item, User user)
         {
 			if (!TieredCaloriesPlugin.Obj.Config.Enabled) {
 				return 1;
