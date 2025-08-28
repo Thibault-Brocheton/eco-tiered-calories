@@ -1,9 +1,9 @@
 ﻿namespace CavRn.TieredCalories
 {
-	using Eco.Core.Plugins;
-	using Eco.Core.Plugins.Interfaces;
-	using Eco.Core.Utils;
-	using Eco.Shared.Utils;
+    using Eco.Core.Plugins.Interfaces;
+    using Eco.Core.Plugins;
+    using Eco.Core.Utils;
+    using Eco.Shared.Utils;
 
 	public class TieredCaloriesMod: IModInit
 	{
@@ -18,8 +18,10 @@
 	public class TieredCaloriesConfig: Singleton<TieredCaloriesConfig>
 	{
 		public bool Enabled { get; set; } = true;
-		public int LevelOffset { get; set; } = 0;
-	}
+        public int[] MaxSkillsWithoutReduction { get; set; } = new int[] {1,2,4,6,100};
+        public int[] DivisionPerAdditionalSkill { get; set; } = new int[] {2,3,4,7,10};
+        public bool CountStarsSpentInsteadOfSkills { get; set; } = false;
+    }
 
 	public class TieredCaloriesPlugin: Singleton<TieredCaloriesPlugin>, IModKitPlugin, IConfigurablePlugin
 	{

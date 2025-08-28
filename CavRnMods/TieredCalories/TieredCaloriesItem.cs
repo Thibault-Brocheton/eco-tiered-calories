@@ -1,12 +1,13 @@
 ﻿namespace Eco.Mods.TechTree
 {
-	using System;
-	using System.Linq;
-	using Eco.Gameplay.Items;
-	using Eco.Gameplay.Players;
-	using Eco.Shared.Networking;
-	using Eco.Shared.Logging;
-	using CavRn.TieredCalories;
+    using CavRn.TieredCalories;
+    using Eco.Gameplay.Items;
+    using Eco.Gameplay.Players;
+    using Eco.Shared.Logging;
+    using Eco.Shared.Networking;
+    using Eco.Shared.Utils;
+    using System.Linq;
+    using System;
 
     public interface ITieredCalories
     {
@@ -20,7 +21,7 @@
 			if (!TieredCaloriesPlugin.Obj.Config.Enabled) {
 				return 1;
 			}
-			
+
             var tier = (int?)ItemAttribute.Get<TierAttribute>(item.Type)?.Tier;
             if (tier == null)
             {
@@ -28,8 +29,16 @@
                 return 1;
             }
 
-            var userLevel = user.Skillset.Skills.Count(s => s.StarsSpent == 1) + TieredCaloriesPlugin.Obj.Config.LevelOffset;
-            return userLevel > tier ? userLevel - tier.Value + 1 : 1;
+            var userValue = TieredCaloriesPlugin.Obj.Config.CountStarsSpentInsteadOfSkills ? user.Skillset.Skills.Sum(s => s.StarsSpent) : user.Skillset.Skills.Count(s => s.StarsSpent > 0);
+            var tierValue = TieredCaloriesPlugin.Obj.Config.MaxSkillsWithoutReduction.GetAtIndexOrLast(tier.Value);
+
+            // No reduction
+            if (userValue <= tierValue)
+            {
+                return 1;
+            }
+
+            return TieredCaloriesPlugin.Obj.Config.DivisionPerAdditionalSkill.GetAtIndexOrLast(userValue - tierValue - 1);
         }
 
         public static string Consume<T>(T item, Player player, Func<string> baseConsume)
