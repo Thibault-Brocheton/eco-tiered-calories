@@ -19,7 +19,7 @@
 	{
 		public bool Enabled { get; set; } = true;
         public int[] MaxSkillsWithoutReduction { get; set; } = new int[] {1,2,4,6,100};
-        public int[] DivisionPerAdditionalSkill { get; set; } = new int[] {2,3,4,7,10};
+        public int[] CaloriesDivisionPerAdditionalSkill { get; set; } = new int[] {2,3,4,7,10};
         public bool CountStarsSpentInsteadOfSkills { get; set; } = false;
     }
 

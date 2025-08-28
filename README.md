@@ -45,7 +45,7 @@ This file can be edited to adjust the mod's behavior.
   Per-food-tier skill threshold with no penalty.  
   Arrays are indexed by the Eco Tier value; if T is out of bounds, the last element is used.  
 
-- **`DivisionPerAdditionalSkill`** *(int[], default = [2, 3, 4, 7, 10])*
+- **`CaloriesDivisionPerAdditionalSkill`** *(int[], default = [2, 3, 4, 7, 10])*
   Divisor applied based on how many skills are over the threshold.  
   over=1 → use index 0, over=2 → index 1, etc.; if out of bounds, use the last value.  
   Tip: keep values ≥2, increasing, and cap your desired maximum (e.g. 10).  

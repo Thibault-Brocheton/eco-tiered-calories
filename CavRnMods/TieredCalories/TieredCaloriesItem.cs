@@ -38,7 +38,7 @@
                 return 1;
             }
 
-            return TieredCaloriesPlugin.Obj.Config.DivisionPerAdditionalSkill.GetAtIndexOrLast(userValue - tierValue - 1);
+            return TieredCaloriesPlugin.Obj.Config.CaloriesDivisionPerAdditionalSkill.GetAtIndexOrLast(userValue - tierValue - 1);
         }
 
         public static string Consume<T>(T item, Player player, Func<string> baseConsume)
