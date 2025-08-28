@@ -41,7 +41,15 @@ This file can be edited to adjust the mod's behavior.
   - `true` → the system is active (calorie reduction based on the player's level).  
   - `false` → the system is disabled (foods behave like in vanilla Eco).  
 
-- **`LevelOffset`** *(int, default = 0)*  
-  Adds or remove an **artificial offset** to the player’s level when calculating calorie reduction.  
-  - Example: if `LevelOffset = 2`, a level 3 player will be treated as level 5 for the calculation.  
-  - Useful to make the mod **more restrictive**, forcing players to aim for higher-tier foods.
+- **`MaxSkillsWithoutReduction`** *(int[], default = [1, 2, 4, 6, 100])*  
+  Per-food-tier skill threshold with no penalty.  
+  Arrays are indexed by the Eco Tier value; if T is out of bounds, the last element is used.  
+
+- **`DivisionPerAdditionalSkill`** *(int[], default = [2, 3, 4, 7, 10])*
+  Divisor applied based on how many skills are over the threshold.  
+  over=1 → use index 0, over=2 → index 1, etc.; if out of bounds, use the last value.  
+  Tip: keep values ≥2, increasing, and cap your desired maximum (e.g. 10).  
+  
+- **`CountStarsSpentInsteadOfSkills`** *(bool, default = false)*
+  If true, use total stars spent instead of the count of skilled professions.  
+  To be used with [Skills Requirements](https://github.com/Thibault-Brocheton/eco-skills-requirements) that allows to increase the star cost of skills.
