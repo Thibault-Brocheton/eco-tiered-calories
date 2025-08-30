@@ -2,7 +2,8 @@
 
 This mod has been developed for Eco version v11.1.13  
 This mod introduces a **tier-based food system** for [Eco](https://www.strangeloopgames.com/eco/).  
-Each food item is assigned a **Tier**. If a player's overall skill level is higher than the food's tier, the **calories provided are reduced proportionally**, encouraging players to consume higher-tier meals as they progress.
+Each food item is assigned a **Tier**. If a player's overall skill level is higher than the food's tier, the **calories provided are reduced proportionally**, encouraging players to consume higher-tier meals as they progress.  
+Tier has been based on [Eco food App](https://ecofood.app/calculator/).
 
 ## 🧮 Calculation Method
 
