@@ -28,16 +28,16 @@ namespace Eco.Mods.TechTree
 
     /// <summary>
     /// <para>
-    /// Server side seed item definition for the "CamasBulb" item. 
+    /// Server side seed item definition for the "CamasBulb" item.
     /// This object inherits the SeedIem base class to allow for planting/consumption mechanics.
     /// </para>
     /// <para>More information about SeedIem objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.SeedItem.html</para>
     /// </summary>
     /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
+    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [Serialized] // Tells the save/load system this object needs to be serialized. 
+    [Serialized] // Tells the save/load system this object needs to be serialized.
     [LocDisplayName("Camas Bulb")] // Defines the localized name of the item.
     [Yield(typeof(CamasBulbItem), typeof(GatheringSkill), new float[] { 1f, 1.4f, 1.5f, 1.6f, 1.7f, 1.8f, 1.9f, 2.0f })]
     [Crop] // Defines this item as a crop item
@@ -64,18 +64,18 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition             => new Nutrients() { Carbs = 1, Fat = 5, Protein = 2, Vitamins = 0};
 
         /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
-        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(168);
+        public override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(168);
     }
 
     /// <summary>
     /// <para>
-    /// Server side seed pack item definition for the "CamasBulb Pack" item. 
+    /// Server side seed pack item definition for the "CamasBulb Pack" item.
     /// This object inherits the SeedPackItem base class to allow for planting/consumption mechanics.
     /// </para>
     /// <para>This item is currently hidden from the player. It is either an internal use item or not ready for public release. Removing the hidden tag is not recommended.</para>
     /// <para>More information about SeedPackItem objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.SeedPackItem.html</para>
     /// </summary>
-    [Serialized] // Tells the save/load system this object needs to be serialized. 
+    [Serialized] // Tells the save/load system this object needs to be serialized.
     [LocDisplayName("Camas Bulb Pack")] // Defines the localized name of the item.
     [Category("Hidden")] // Hides this object from the player. It is not recommended you remove this tag.
     [Weight(75)] // Defines how heavy the CamasBulb is.

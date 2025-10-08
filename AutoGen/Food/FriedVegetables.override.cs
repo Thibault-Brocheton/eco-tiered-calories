@@ -17,17 +17,17 @@ namespace Eco.Mods.TechTree
 
     /// <summary>
     /// <para>
-    /// Server side food item definition for the "FriedVegetables" item. 
+    /// Server side food item definition for the "FriedVegetables" item.
     /// This object inherits the FoodItem base class to allow for consumption mechanics.
     /// </para>
     /// <para>This item is currently hidden from the player. It is either an internal use item or not ready for public release. Removing the hidden tag is not recommended.</para>
     /// <para>More information about FoodItem objects can be found at https://docs.play.eco/api/server/eco.gameplay/Eco.Gameplay.Items.FoodItem.html</para>
     /// </summary>
     /// <remarks>
-    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization. 
+    /// This is an auto-generated class. Don't modify it! All your changes will be wiped with next update! Use Mods* partial methods instead for customization.
     /// If you wish to modify this class, please create a new partial class or follow the instructions in the "UserCode" folder to override the entire file.
     /// </remarks>
-    [Serialized] // Tells the save/load system this object needs to be serialized. 
+    [Serialized] // Tells the save/load system this object needs to be serialized.
     [LocDisplayName("Fried Vegetables")] // Defines the localized name of the item.
     [Category("Hidden")] // Hides this object from the player. It is not recommended you remove this tag.
     [Weight(200)] // Defines how heavy the FriedVegetables is.
@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition             => new Nutrients() { Carbs = 11, Fat = 8, Protein = 3, Vitamins = 2};
 
         /// <summary>Defines the default time it takes for this item to spoil. This value can be modified by the inventory this item currently resides in.</summary>
-        protected override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
+        public override float BaseShelfLife            => (float)TimeUtil.HoursToSeconds(72);
     }
 
 }
