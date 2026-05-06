@@ -1,3 +1,5 @@
+DEPRECATED: This mod is no longer maintained. I consider it not relevant anymore with the v13.
+
 # 🍅​ Eco Tiered Calories Mod
 
 This mod has been developed for Eco version v12.0.0  
